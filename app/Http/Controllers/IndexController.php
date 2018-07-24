@@ -10,6 +10,8 @@ class IndexController extends Controller {
      * @return Response
      */
     public function showIndexPage(Request $request) {
+        return redirect()->to('https://www.pcextreme.nl/');
+        
         if (env('POLR_SETUP_RAN') != true) {
             return redirect(route('setup'));
         }
